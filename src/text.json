@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "article": "Thaksin Shinawatra",
+    "text": "Thaksin Shinawatra is a Thai businessman and politician. Between 2001 and 2006, he was the Prime Minister of Thailand.",
+    "questions": [
+      {
+        "question": "Which country is Thaksin Shinawatra associated with?",
+        "choices": [
+          "Singapore",
+          "Thailand",
+          "Malaysia",
+          "Zimbabwe"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+]
