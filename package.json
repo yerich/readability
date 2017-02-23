@@ -11,11 +11,15 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "react-scripts": "0.8.4",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
+    "html2canvas": "^0.5.0-beta4",
+    "lodash": "^4.17.4",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "superagent": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

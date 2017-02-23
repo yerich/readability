@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif|Lato|Lora|Merriweather|Montserrat|Open+Sans|Roboto|Roboto+Slab|Slabo+27px|Source+Sans+Pro');
+
 body {
   font-family: sans-serif;
 }
@@ -22,7 +24,7 @@ body {
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 400px) {
   #screen-too-small-error {
     display: block;
     position: fixed;
@@ -73,9 +75,40 @@ body {
   background: #EAEAEA;
   text-decoration: none;
   color: #000;
+  cursor: default;
 
-  &:hover {
+  &:not(.disabled):not([disabled]):hover {
     background: #D4D4D4;
     cursor: pointer;
   }
+
+  &.disabled, &[disabled] {
+    opacity: 0.5;
+    padding-left: 0.5em;
+  }
+}
+
+.quiz-wrapper {
+  .questions-wrapper {
+    ul {
+      list-style: none;
+      margin-top: 0;
+    }
+
+    .question-text {
+      margin-bottom: 0;
+    }
+
+    .question-answer-text {
+      padding-left: 5px;
+    }
+  }
+}
+
+.screenshot {
+  width: 44%;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #CCC;
+  vertical-align: top;
 }

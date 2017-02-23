@@ -1,7 +1,15 @@
 import React from 'react';
 
-export default (props) => (
-  <div className="instructions">
+export default (props) => {
+  let button;
+  if (props.loaded) {
+    button = <a className="button" href="#" onClick={props.finished}>Continue</a>;
+  }
+  else {
+    button = <a className="button disabled" href="#">Loading...</a>;
+  }
+
+  return <div className="instructions">
     <h1>Reading speed study</h1>
     <p>
       Thank you for participating in this study.<br />
@@ -24,10 +32,11 @@ export default (props) => (
       After you are done with reading the article, we will ask you a few very simple
       questions about it to make sure you've read the entire article. These questions
       are designed to be very easy to answer, so you shouldn't worry about forgetting
-      or missing any details. You do not have to answer every question correctly.
+      or missing any details. You do not have to answer every question correctly. However,
+      we may not award you credit if we believe you didn't read the entire article.
     </p>
     <p>
-      <strong>This study should take around 20 minutes to complete.</strong>
+      <strong>This study should take around 10 minutes to complete.</strong>
     </p>
     <p>
       No personal information is collected in this study. Your IP address may be used
@@ -49,10 +58,9 @@ export default (props) => (
     </p>
     <p>
       When you are ready to begin the test, click the button below to continue.
-      We will begin with a sample article.
     </p>
     <div className="next-button-wrapper">
-      <a className="button" href="#" onClick={props.finished}>Continue</a>
+      {button}
     </div>
-  </div>
-);
+  </div>;
+};
